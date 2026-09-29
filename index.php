@@ -34,10 +34,9 @@
         foreach ($jugadores as $jugador) {
             if ($buscar == $jugador->nombre || $buscar == '') {
                 echo '<li>';
-                echo '<form action="actualizar.php" method="POST">';
-                echo '<input type="hidden" name="dorsal_original" value="' . $jugador->dorsal . '">';
-                echo '<input type="number" name="dorsal" value="' . $jugador->dorsal . '" required>';
-                echo '<input type="text" name="nombre" value="' . $jugador->nombre . '" required>';
+                echo '<p>'.$jugador->nombre.'</p>';
+                echo '<form action="actualizar.php" method="GET">';
+                echo '<input type="hidden" name="dorsal" value="' . $jugador->dorsal . '" required>';
                 echo '<button type="submit">Editar</button>';
                 echo '</form>';
                 echo '<form action="borrar.php" method="POST">';

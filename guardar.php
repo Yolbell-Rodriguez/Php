@@ -19,3 +19,4 @@ try {
 } catch (PDOException $e) {
     echo "Error al guardar: " . $e->getMessage();
 }
+?>
